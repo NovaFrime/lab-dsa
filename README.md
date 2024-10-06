@@ -14,16 +14,16 @@ This repository contains solutions and implementations for various Data Structur
 
 The lab covers the following topics in Data Structures and Algorithms:
 
-**Lab 1: OOP Reviews & Arrays**
-**Lab 2: Simple sorting**
-**Lab 3: Stacks & Queues**
-**Lab 4: Linked List**
-**Lab 5: Recursion**
-**Lab 6: Trees**
-**Lab 7: Hash Tables**
-**Lab 8: Graph**
-**Lab 9: Exam**
-**Lab 10: Project Presentation**
+1. **Lab 1: OOP Reviews & Arrays**
+2. **Lab 2: Simple sorting**
+3. **Lab 3: Stacks & Queues**
+4. **Lab 4: Linked List**
+5. **Lab 5: Recursion**
+6. **Lab 6: Trees**
+7. **Lab 7: Hash Tables**
+8. **Lab 8: Graph**
+9. **Lab 9: Exam**
+10. **Lab 10: Project Presentation**
 
 ## How to Run the Code
 
