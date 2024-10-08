@@ -24,7 +24,7 @@ public class GasMileage
         //double miles = scan.nextDouble();
         //1st way, we make sure that the input work with integer as float
         int miles = (int) Math.ceil(scan.nextDouble());
-        //2nd way, we can round that number and convert it back to an integer        gallons = scan.nextDouble(); 
+        //2nd way, we can round that number and convert it back to an integer        
 
         gallons = scan.nextDouble(); 
 
