@@ -1,6 +1,8 @@
+package Problem_1;
+
 // bubbleSort.java
 // demonstrates bubble sort
-// to run this program: C>java BubbleSortApp
+// to run this program: C>java Problem_1.BubbleSortApp
 ////////////////////////////////////////////////////////////////
 class ArrayBub {
    private long[] a; // ref to array a
@@ -69,7 +71,7 @@ class ArrayBub {
       return nSwaps;
    }
    // --------------------------------------------------------------
-} // end class ArrayBub
+} // end class Problem_1.ArrayBub
   ////////////////////////////////////////////////////////////////
 
 class BubbleSortApp {
@@ -99,5 +101,5 @@ class BubbleSortApp {
       System.out.println("The number of swaps = " + arr.getSwapNumber());
 
    } // end main()
-} // end class BubbleSortApp
+} // end class Problem_1.BubbleSortApp
   ////////////////////////////////////////////////////////////////

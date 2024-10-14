@@ -1,13 +1,15 @@
-// selectSort.java
-// demonstrates selection sort
-// to run this program: C>java SelectSortApp
-////////////////////////////////////////////////////////////////
-class ArraySel
+package Problem_3;
+
+// insertSort.java
+// demonstrates insertion sort
+// to run this program: C>java Problem_3.InsertSortApp
+//--------------------------------------------------------------
+class ArrayIns
    {
    private long[] a;                 // ref to array a
    private int nElems;               // number of data items
 //--------------------------------------------------------------
-   public ArraySel(int max)          // constructor
+   public ArrayIns(int max)          // constructor
       {
       a = new long[max];                 // create the array
       nElems = 0;                        // no items yet
@@ -26,49 +28,45 @@ class ArraySel
       System.out.println("");
       }
 //--------------------------------------------------------------
-public void selectionSort() {
-   int out, in, min;
-   int comparisons = 0;
-   int totalComparisons = 0;
+public void insertionSort()
+{
+    int in, out;
+    int innerPassCount = 0;
 
-   for(out=0; out<nElems-1; out++) {
-       min = out;
-       for(in=out+1; in<nElems; in++) {
-           comparisons++;
-           if(a[in] < a[min]) {
-               min = in;
-           }
-       }
-       swap(out, min);
-       totalComparisons += comparisons;
-       comparisons = 0;
-       System.out.println("After inner loop:");
-       display();
-       System.out.println("Items swapped: " + out + " -> " + min);
-       System.out.println("Number of comparisons after inner loop: " + comparisons);
-       System.out.println("Total number of comparisons: " + totalComparisons);
-   }      
-   System.out.println("Complexity algo: " + ((nElems*(nElems-1)/2)) +" with O(n^2)");
+    for(out=1; out<nElems; out++)
+    {
+        long temp = a[out];
+        in = out;
+        innerPassCount = 0;
+        while(in>0 && a[in-1] >= temp)
+        {
+            a[in] = a[in-1];
+            --in;
+            innerPassCount++;
+        }
+        a[in] = temp;
+        
+        System.out.println("Pass " + (out) + ":");
+        display();
+        System.out.println("Inner pass count: " + innerPassCount);
+        System.out.println("Total passes so far: " + (out));
+    }
 
+    System.out.println("Total number of passes: " + (nElems - 1));
+    System.out.println("Complexity algo: " + ((nElems*(nElems-1)/4)) +" with O(n^2)");
 
 }
+
 //--------------------------------------------------------------
-   private void swap(int one, int two)
-      {
-      long temp = a[one];
-      a[one] = a[two];
-      a[two] = temp;
-      }
-//--------------------------------------------------------------
-   }  // end class ArraySel
+   }  // end class Problem_3.ArrayIns
 ////////////////////////////////////////////////////////////////
-class SelectSortApp
+class InsertSortApp
    {
    public static void main(String[] args)
       {
       int maxSize = 100;            // array size
-      ArraySel arr;                 // reference to array
-      arr = new ArraySel(maxSize);  // create the array
+      ArrayIns arr;                 // reference to array
+      arr = new ArrayIns(maxSize);  // create the array
 
       arr.insert(77);               // insert 10 items
       arr.insert(99);
@@ -83,9 +81,8 @@ class SelectSortApp
 
       arr.display();                // display items
 
-      arr.selectionSort();          // selection-sort them
+      arr.insertionSort();          // insertion-sort them
 
       arr.display();                // display them again
       }  // end main()
-   }  // end class SelectSortApp
-////////////////////////////////////////////////////////////////
+   }  // end class Problem_3.InsertSortApp
